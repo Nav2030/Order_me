@@ -1,0 +1,85 @@
+{
+  "project_info": {
+    "project_number": "859713914922",
+    "firebase_url": "https://hotelsystem-97269.firebaseio.com",
+    "project_id": "hotelsystem-97269",
+    "storage_bucket": "hotelsystem-97269.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:859713914922:android:995796b40ecda00f",
+        "android_client_info": {
+          "package_name": "com.sunview.hotel_system"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "859713914922-ha7as8oa8a1qsvaumk0u1gvi3sqhavud.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sunview.hotel_system",
+            "certificate_hash": "4fa079b50c55fe0191282fdd2e5a2ca618a505de"
+          }
+        },
+        {
+          "client_id": "859713914922-virg8ip4o7869n5842r1sol97tusljk6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8-9hpMV7AEpWnFFwGzVjTvDB2nHr0r5c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "859713914922-virg8ip4o7869n5842r1sol97tusljk6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:859713914922:android:15bb5a97a1697eaf",
+        "android_client_info": {
+          "package_name": "com.sunview.system_for_hotel_mobile_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "859713914922-1ohsvgrdagglb25gsf57kekmkj7teboq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sunview.system_for_hotel_mobile_app",
+            "certificate_hash": "4fa079b50c55fe0191282fdd2e5a2ca618a505de"
+          }
+        },
+        {
+          "client_id": "859713914922-virg8ip4o7869n5842r1sol97tusljk6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8-9hpMV7AEpWnFFwGzVjTvDB2nHr0r5c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "859713914922-virg8ip4o7869n5842r1sol97tusljk6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
