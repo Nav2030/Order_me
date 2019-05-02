@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:system_for_hotel_mobile_app/Setup/signIn.dart';
+import 'package:system_for_hotel_mobile_app/Setup/sign_up.dart';
 
 
 class WelcomePage extends StatefulWidget {
@@ -31,8 +33,9 @@ class _WelcomePageState extends State<WelcomePage> {
   }
 
   void navigateToSignIn(){
+    Navigator.push(context, MaterialPageRoute(builder: (context) => LoginPage(),fullscreenDialog: true));
   }
   void navigateToSignUp(){
-
+    Navigator.push(context, MaterialPageRoute(builder: (context) => SignUpPage(),fullscreenDialog: true));
   }
 }
