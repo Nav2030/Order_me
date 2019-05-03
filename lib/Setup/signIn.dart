@@ -9,13 +9,14 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+  TextStyle style = TextStyle(fontFamily: 'Montserrat', fontSize: 20.0);
   String _email,_password;
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Sign In"),
+
       ),
       body: Form(
           key: _formKey,
@@ -29,8 +30,13 @@ class _LoginPageState extends State<LoginPage> {
                 },
                 onSaved: (input) => _email = input,
                 decoration: InputDecoration(
-                    labelText: 'Email'
+                    contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
+                    hintText: "Email",
+                    border:
+                    OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))
                 ),
+                obscureText: false,
+                style: style,
               ),
               TextFormField(
                 validator: (input){
@@ -40,14 +46,29 @@ class _LoginPageState extends State<LoginPage> {
                 },
                 onSaved: (input) => _password = input,
                 decoration: InputDecoration(
-                    labelText: 'Password'
+                    contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
+                    hintText: "Password",
+                    border:
+                    OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))
                 ),
                 obscureText: true,
+                style: style,
               ),
-              RaisedButton(
-                onPressed: signIn,
-                child: Text('Sign In'),
-              ),
+              Material(
+                elevation: 5.0,
+                borderRadius: BorderRadius.circular(30.0),
+                color: Color(0xffff9000),
+                child: MaterialButton(
+                  minWidth: MediaQuery.of(context).size.width,
+                  padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
+                  onPressed: signIn,
+                  child: new Text(
+                    "Sign In",
+                    style:  style.copyWith(
+                        color: Colors.white, fontWeight: FontWeight.bold),
+                  ),
+                ),
+              )
             ],
           )),
     );
