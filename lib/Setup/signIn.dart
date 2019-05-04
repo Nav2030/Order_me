@@ -9,35 +9,48 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
-  TextStyle style = TextStyle(fontFamily: 'Montserrat', fontSize: 20.0);
   String _email,_password;
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+  TextStyle style = TextStyle(fontFamily: 'Montserrat', fontSize: 20.0);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-
-      ),
       body: Form(
           key: _formKey,
+          child: Container(
+            color: Colors.white,
+            child: Padding(
+              padding: const EdgeInsets.all(36.0),
           child: Column(
-            children: <Widget>[
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+             children: <Widget>[
+              SizedBox(
+                height: 155.0,
+                child: Image.asset(
+                  "assets/logo.png",
+                  fit: BoxFit.contain,
+                ),
+              ),
+              SizedBox(height: 45.0),
               TextFormField(
                 validator: (input){
                   if(input.isEmpty){
-                    return 'Please Type an email';
+                    return 'Please type your email address';
                   }
                 },
                 onSaved: (input) => _email = input,
                 decoration: InputDecoration(
+                    labelText: 'Email',
                     contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
                     hintText: "Email",
                     border:
-                    OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))
+                      OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))
                 ),
                 obscureText: false,
                 style: style,
               ),
+              SizedBox(height: 25.0),
               TextFormField(
                 validator: (input){
                   if(input.length < 6){
@@ -46,31 +59,43 @@ class _LoginPageState extends State<LoginPage> {
                 },
                 onSaved: (input) => _password = input,
                 decoration: InputDecoration(
+                    labelText: 'Password',
                     contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
                     hintText: "Password",
                     border:
-                    OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))
+                      OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))
                 ),
                 obscureText: true,
-                style: style,
+              ),
+              SizedBox(
+                height: 35.0,
               ),
               Material(
                 elevation: 5.0,
                 borderRadius: BorderRadius.circular(30.0),
-                color: Color(0xffff9000),
+                color: Color(0xff0e0923),
                 child: MaterialButton(
                   minWidth: MediaQuery.of(context).size.width,
                   padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
                   onPressed: signIn,
                   child: new Text(
                     "Sign In",
-                    style:  style.copyWith(
-                        color: Colors.white, fontWeight: FontWeight.bold),
+                    style: new TextStyle(
+                      color: Colors.white,
+                      fontSize: 20.0,
+                      fontWeight: FontWeight.w300,
+                      letterSpacing: 0.3,
+                    ),
                   ),
                 ),
-              )
+              ),
+              SizedBox(
+                height: 15.0,
+              ),
             ],
           )),
+        ),
+      ),
     );
   }
   Future<void> signIn() async{
