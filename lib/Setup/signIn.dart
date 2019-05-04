@@ -15,10 +15,11 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomPadding: false,
       body: Form(
           key: _formKey,
           child: Container(
-            color: Colors.white,
+            color: Color(0xff0e0960),
             child: Padding(
               padding: const EdgeInsets.all(36.0),
           child: Column(
@@ -41,6 +42,8 @@ class _LoginPageState extends State<LoginPage> {
                 },
                 onSaved: (input) => _email = input,
                 decoration: InputDecoration(
+                    filled: true,
+                    fillColor: Colors.white,
                     labelText: 'Email',
                     contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
                     hintText: "Email",
@@ -59,6 +62,8 @@ class _LoginPageState extends State<LoginPage> {
                 },
                 onSaved: (input) => _password = input,
                 decoration: InputDecoration(
+                    filled: true,
+                    fillColor: Colors.white,
                     labelText: 'Password',
                     contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
                     hintText: "Password",
@@ -66,6 +71,7 @@ class _LoginPageState extends State<LoginPage> {
                       OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))
                 ),
                 obscureText: true,
+                style:style,
               ),
               SizedBox(
                 height: 35.0,
@@ -73,7 +79,7 @@ class _LoginPageState extends State<LoginPage> {
               Material(
                 elevation: 5.0,
                 borderRadius: BorderRadius.circular(30.0),
-                color: Color(0xff0e0923),
+                color: Color(0xffff9000),
                 child: MaterialButton(
                   minWidth: MediaQuery.of(context).size.width,
                   padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
