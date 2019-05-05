@@ -34,7 +34,7 @@ class _WelcomePageState extends State<WelcomePage> {
                   ),
                   Material(
                     elevation: 5.0,
-                    borderRadius: BorderRadius.circular(30.0),
+                    borderRadius: BorderRadius.circular(15.0),
                     color: Color(0xffff9000),
                     child: MaterialButton(
                       minWidth: MediaQuery.of(context).size.width,
@@ -56,8 +56,8 @@ class _WelcomePageState extends State<WelcomePage> {
                   ),
                   Material(
                     elevation: 5.0,
-                    borderRadius: BorderRadius.circular(30.0),
-                    color: Color(0xffff9000),
+                    borderRadius: BorderRadius.circular(15.0),
+                    color: Color(0xffff8900),
                     child: MaterialButton(
                       minWidth: MediaQuery.of(context).size.width,
                       padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),

@@ -47,7 +47,7 @@ class _SignUpPageState extends State<SignUpPage> {
                         contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
                         hintText: "Email",
                         border:
-                        OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))
+                        OutlineInputBorder(borderRadius: BorderRadius.circular(16.0))
                     ),
                     obscureText: false,
                     style: style,
@@ -67,7 +67,7 @@ class _SignUpPageState extends State<SignUpPage> {
                         contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
                         hintText: "Password",
                         border:
-                        OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))
+                        OutlineInputBorder(borderRadius: BorderRadius.circular(16.0))
                     ),
                     obscureText: true,
                     style:style,
