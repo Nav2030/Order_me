@@ -15,91 +15,134 @@ class _SignUpPageState extends State<SignUpPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomPadding: false,
-      body: Form(
-        key: _formKey,
-        child: Container(
-          color: Color(0xff0e0960),
-          child: Padding(
-              padding: const EdgeInsets.all(36.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  SizedBox(
-                    height: 155.0,
-                    child: Image.asset(
-                      "assets/logo.png",
-                      fit: BoxFit.contain,
-                    ),
-                  ),
-                  SizedBox(height: 45.0),
-                  TextFormField(
-                    validator: (input){
-                      if(input.isEmpty){
-                        return 'Please type your email address';
-                      }
-                    },
-                    onSaved: (input) => _email = input,
-                    decoration: InputDecoration(
-                        filled: true,
-                        fillColor: Colors.white,
-                        labelText: 'Email',
-                        contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
-                        hintText: "Email",
-                        border:
-                        OutlineInputBorder(borderRadius: BorderRadius.circular(16.0))
-                    ),
-                    obscureText: false,
-                    style: style,
-                  ),
-                  SizedBox(height: 25.0),
-                  TextFormField(
-                    validator: (input){
-                      if(input.length < 6){
-                        return 'Please provide password at least 6 characters';
-                      }
-                    },
-                    onSaved: (input) => _password = input,
-                    decoration: InputDecoration(
-                        filled: true,
-                        fillColor: Colors.white,
-                        labelText: 'Password',
-                        contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
-                        hintText: "Password",
-                        border:
-                        OutlineInputBorder(borderRadius: BorderRadius.circular(16.0))
-                    ),
-                    obscureText: true,
-                    style:style,
-                  ),
-                  SizedBox(
-                    height: 35.0,
-                  ),
-                  Material(
-                    elevation: 5.0,
-                    borderRadius: BorderRadius.circular(30.0),
-                    color: Color(0xffff9000),
-                    child: MaterialButton(
-                      minWidth: MediaQuery.of(context).size.width,
-                      padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
-                      onPressed: signUp,
-                      child: new Text(
-                        "Sign Up",
-                        style: new TextStyle(
-                          color: Colors.white,
-                          fontSize: 20.0,
-                          fontWeight: FontWeight.w300,
-                          letterSpacing: 0.3,
+      body:Stack(
+        children: <Widget>[
+          Image.asset(
+            'assets/background.jpg',
+            fit: BoxFit.cover,
+            width: double.infinity,
+            height : double.infinity,
+          ),
+          Container(
+            color: Color(0xff0e0923).withOpacity(0.68),
+            width: double.infinity,
+            height: double.infinity,
+          ),
+          Container(
+            alignment: Alignment.topCenter,
+            child: Image.asset(
+              'assets/logo.png',
+              width: 150.0,
+              height: 200.0,
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top :200.0),
+            child: Center(
+              child:  Form(
+                  key: _formKey,
+                  child: Column(
+                    children: <Widget>[
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Material(
+                          borderRadius: BorderRadius.circular(10.0),
+                          color: Colors.white.withOpacity(0.8),
+                          elevation: 0.0,
+                          child: Padding(padding: const EdgeInsets.only(left:12.0),
+                            child:  TextFormField(
+                              validator: (input){
+                                if(input.isEmpty){
+                                  return 'Please type your email address';
+                                }
+                              },
+                              onSaved: (input) => _email = input,
+                              decoration: InputDecoration(
+                                icon: Icon(Icons.alternate_email),
+                                hintText: "Email",
+                              ),
+                              obscureText: false,
+                            ),
+                          ),
                         ),
                       ),
-                    ),
-                  ),
-                  SizedBox(
-                    height: 15.0,
-                  ),
-                ],
-              )),
-        ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Material(
+                          borderRadius: BorderRadius.circular(10.0),
+                          color: Colors.white.withOpacity(0.8),
+                          elevation: 0.0,
+                          child: Padding(padding: const EdgeInsets.only(left:12.0),
+                            child:  TextFormField(
+                              validator: (input){
+                                if(input.length < 6){
+                                  return 'Please provide password at least 6 characters';
+                                }
+                              },
+                              onSaved: (input) => _password = input,
+                              decoration: InputDecoration(
+                                icon: Icon(Icons.lock_outline),
+                                hintText: "Password",
+                              ),
+                              obscureText: true,
+                            ),
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Material(
+                          borderRadius: BorderRadius.circular(20.0),
+                          color: Color(0xffff9000).withOpacity(0.8),
+                          elevation: 0.0,
+                          child: Padding(padding: const EdgeInsets.only(left:12.0),
+                            child: MaterialButton(
+                              minWidth: MediaQuery.of(context).size.width,
+                              onPressed: signUp,
+                              child: new Text(
+                                "Sign Up",
+                                textAlign: TextAlign.center,
+                                style: new TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 20.0,
+                                  fontWeight: FontWeight.bold,
+                                  letterSpacing: 0.3,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: InkWell(
+                          onTap: (){
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=> LoginPage()));
+                          },
+                          child: RichText(
+                              text: TextSpan(
+                                  style: new TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 16.0,
+                                    fontWeight: FontWeight.w400,
+                                  ),
+                                  children: [
+                                    TextSpan(
+                                        text: "Already a member ? click here to "
+                                    ),
+                                    TextSpan(
+                                        text: "Login",
+                                        style: TextStyle(color: Color(0xffff9000))
+                                    )
+                                  ]
+                              )),
+                        ),
+                      ),
+                    ],
+                  )),
+            ),
+          ),
+        ],
       ),
     );
   }
