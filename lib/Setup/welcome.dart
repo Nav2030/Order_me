@@ -14,7 +14,7 @@ class _WelcomePageState extends State<WelcomePage> {
     return Scaffold(
       resizeToAvoidBottomPadding: false,
       body: Container(
-          color: Color(0xff0e0923),
+          color: Colors.white,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 mainAxisAlignment: MainAxisAlignment.start,
@@ -24,9 +24,12 @@ class _WelcomePageState extends State<WelcomePage> {
                   ),
                   SizedBox(
                     height: 185.0,
-                    child: Image.asset(
-                      "assets/logo.png",
-                      fit: BoxFit.contain,
+                    child: CircleAvatar(
+                      backgroundColor: Color(0xff0e0923),
+                      child: Image.asset(
+                        "assets/logo.png",
+                        fit: BoxFit.contain,
+                      ),
                     ),
                   ),
                   SizedBox(

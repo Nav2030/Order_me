@@ -9,7 +9,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context){
     return MaterialApp(
       title: 'Sun View Beach Hotel',
-
+      theme: ThemeData(
+        primaryColor: Color(0xff0e0923)
+      ),
       home: WelcomePage(),
     );
   }
