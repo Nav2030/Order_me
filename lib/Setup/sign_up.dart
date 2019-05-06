@@ -95,7 +95,6 @@ class _SignUpPageState extends State<SignUpPage> {
                           borderRadius: BorderRadius.circular(20.0),
                           color: Color(0xffff9000).withOpacity(0.8),
                           elevation: 0.0,
-                          child: Padding(padding: const EdgeInsets.only(left:12.0),
                             child: MaterialButton(
                               minWidth: MediaQuery.of(context).size.width,
                               onPressed: signUp,
@@ -110,7 +109,6 @@ class _SignUpPageState extends State<SignUpPage> {
                                 ),
                               ),
                             ),
-                          ),
                         ),
                       ),
                       Padding(
