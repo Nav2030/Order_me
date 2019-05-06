@@ -14,7 +14,7 @@ class _WelcomePageState extends State<WelcomePage> {
     return Scaffold(
       resizeToAvoidBottomPadding: false,
       body: Container(
-          color: Color(0xff0e0960),
+          color: Color(0xff0e0923),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 mainAxisAlignment: MainAxisAlignment.start,
