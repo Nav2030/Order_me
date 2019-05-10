@@ -83,7 +83,7 @@ class _WelcomePageState extends State<WelcomePage> {
                         padding: const EdgeInsets.all(8.0),
                         child: Material(
                           borderRadius: BorderRadius.circular(20.0),
-                          color: Color(0xffff9000).withOpacity(0.8),
+                          color: Color(0xffff9000).withOpacity(0.7),
                           elevation: 0.0,
                             child: MaterialButton(
                               minWidth: MediaQuery.of(context).size.width,
@@ -105,7 +105,7 @@ class _WelcomePageState extends State<WelcomePage> {
                         padding: const EdgeInsets.all(8.0),
                         child: Material(
                           borderRadius: BorderRadius.circular(20.0),
-                          color: Color(0xffff9000).withOpacity(0.8),
+                          color: Color(0xffff9000).withOpacity(0.7),
                           elevation: 0.0,
                             child: MaterialButton(
                               minWidth: MediaQuery.of(context).size.width,
