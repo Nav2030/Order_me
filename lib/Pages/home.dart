@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:system_for_hotel_mobile_app/Pages/terms.dart';
 
 class Home extends StatefulWidget {
   const Home({
@@ -93,7 +94,10 @@ class _HomeState extends State<Home> {
               ),
             ),
             InkWell(
-              onTap: (){},
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=> Terms()));
+
+              },
               child: ListTile(
                 title: Text('Terms And Conditions',
                   style: TextStyle(color:  Color(0xff0e0960)),),
