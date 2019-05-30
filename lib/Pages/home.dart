@@ -51,7 +51,7 @@ class _HomeState extends State<Home> {
         child: new ListView(
           children: <Widget>[
             new UserAccountsDrawerHeader(
-                accountName: Text('${widget.user.displayName}') ,
+                accountName: Text('Hello Customer') ,
                 accountEmail: Text('${widget.user.email}'),
               currentAccountPicture: GestureDetector(
                 child: CircleAvatar(
