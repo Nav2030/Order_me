@@ -70,15 +70,13 @@ class _ContactState extends State<Contact> {
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Material(
-                        borderRadius: BorderRadius.circular(20.0),
-                        color: Color(0xffff9000).withOpacity(0.7),
+                        color: Colors.transparent,
                         elevation: 0.0,
                         child: MaterialButton(
-                            minWidth: MediaQuery.of(context).size.width,
                             onPressed:  () => launch("tel://0767841468"),
                             child: Column(
                               children: <Widget>[
-                                Icon(Icons.call),
+                                Icon(Icons.call,color: Color(0xffff9000)),
                                 new Text(
                                   "Call Us",
                                   textAlign: TextAlign.center,
@@ -97,15 +95,13 @@ class _ContactState extends State<Contact> {
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Material(
-                        borderRadius: BorderRadius.circular(20.0),
-                        color: Color(0xffff9000).withOpacity(0.7),
+                        color: Colors.transparent,
                         elevation: 0.0,
                         child: MaterialButton(
-                            minWidth: MediaQuery.of(context).size.width,
                             onPressed:  () => launch("mailto:sunview.beach@gmail.com"),
                             child: Column(
                               children: <Widget>[
-                                Icon(Icons.email),
+                                Icon(Icons.email,color: Color(0xffff9000),),
                                 new Text(
                                   "Email Us",
                                   textAlign: TextAlign.center,
