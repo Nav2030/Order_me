@@ -11,9 +11,10 @@ class _TermsState extends State<Terms> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Terms And Conditions'),
+        backgroundColor: Color(0xffff9000).withOpacity(0.8),
       ),
       body:  SingleChildScrollView(
-        child: new ListView(
+        child: new Column(
           children: <Widget>[
             new ListTile(
               title: new Text('Menu is displayed as the availability of the menu items in the mapped restaurant.',
@@ -39,6 +40,24 @@ class _TermsState extends State<Terms> {
             ),
             new ListTile(
               title: new Text('Order Me does not store any of your credit card details'),
+            ),
+            new ListTile(
+              title: new Text('Order Me will take reasonable steps to ensure that the personal information collected is accurate, complete and up-to-date.'),
+            ),
+            new ListTile(
+              title: new Text('You can access and request correction of any personal information concerning you at any time. You may also request that your personal information be deleted at any time. Any such requests should be made directly by contacting us.'),
+            ),
+            new ListTile(
+              title: new Text('Order Me will take reasonable steps to protect personal information from misuse, loss and unauthorized access, modification or disclosure.'),
+            ),
+            new ListTile(
+              title: new Text('You can access and request correction of any personal information concerning you at any time. You may also request that your personal information be deleted at any time. Any such requests should be made directly by contacting us.'),
+            ),
+            new ListTile(
+              title: new Text('Order Me will take reasonable steps to protect personal information from misuse, loss and unauthorized access, modification or disclosure.'),
+            ),
+            new ListTile(
+              title: new Text('By using this site, you agree to the terms of the policy as stated above. Whenever you submit information via this site, you consent to the collection, use and disclosure of the information in accordance with the Privacy Policy of Sun View Beach Hotel, Pohaddaramulla, Wadduwa'),
             ),
       ],
     ),

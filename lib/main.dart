@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Sun View Beach Hotel',
       theme: ThemeData(
-        primaryColor: Color(0xff0e0923)
+        primaryColor: Color(0xff0e0923),
       ),
       home: WelcomePage(),
     );
