@@ -18,6 +18,7 @@ class _TermsState extends State<Terms> {
           children: <Widget>[
             new ListTile(
               title: new Text('Menu is displayed as the availability of the menu items in the mapped restaurant.',
+                textAlign: TextAlign.justify,
               ),
             ),
             new ListTile(
