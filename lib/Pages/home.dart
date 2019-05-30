@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:system_for_hotel_mobile_app/Pages/terms.dart';
+import 'package:carousel_pro/carousel_pro.dart';
 
 class Home extends StatefulWidget {
   const Home({
@@ -15,6 +16,29 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
+    Widget imageCarousel =  new Container(
+      height: 200.0,
+      child: new Carousel(
+        boxFit: BoxFit.cover,
+        images: [
+          AssetImage('assets/carousel/menu1.jpg'),
+          AssetImage('assets/carousel/menu2.jpg'),
+          AssetImage('assets/carousel/menu3.jpg'),
+          AssetImage('assets/carousel/menu4.jpg'),
+          AssetImage('assets/carousel/menu5.jpg'),
+          AssetImage('assets/carousel/menu6.jpg'),
+          AssetImage('assets/carousel/menu7.jpg'),
+          AssetImage('assets/carousel/menu8.jpg'),
+        ],
+        autoplay: true,
+        animationCurve: Curves.fastOutSlowIn,
+        animationDuration: Duration(milliseconds: 1000),
+        dotSize: 4.0,
+        indicatorBgPadding: 6.0,
+        dotColor: Colors.transparent,
+        dotBgColor: Colors.transparent,
+      ),
+    );
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color(0xff0e0923),
@@ -106,6 +130,11 @@ class _HomeState extends State<Home> {
             )
           ],
         ),
+      ),
+      body: ListView(
+        children: <Widget>[
+          imageCarousel,
+       ],
       ),
     );
   }
