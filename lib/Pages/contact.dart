@@ -34,7 +34,6 @@ class _ContactState extends State<Contact> {
           ),
           Padding(
             padding: const EdgeInsets.only(top :200.0),
-            child: Center(
                 child: Column(
                   children: <Widget>[
                     Padding(
@@ -64,63 +63,46 @@ class _ContactState extends State<Contact> {
                             letterSpacing: 0.6,
                           ),
                         ),
-                        leading: Icon(Icons.home,color: Color(0xffff9000),),
+                        leading: Icon(Icons.home,color: Color(0xffff9000),size :35.0),
                       ),
                     ),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
-                      child: Material(
-                        color: Colors.transparent,
-                        elevation: 0.0,
-                        child: MaterialButton(
-                            onPressed:  () => launch("tel://0767841468"),
-                            child: Column(
-                              children: <Widget>[
-                                Icon(Icons.call,color: Color(0xffff9000)),
-                                new Text(
-                                  "Call Us",
-                                  textAlign: TextAlign.center,
-                                  style: new TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 20.0,
-                                    fontWeight: FontWeight.bold,
-                                    letterSpacing: 0.3,
-                                  ),
-                                ),
-                              ],
-                            )
-                        ),
+                      child: FlatButton.icon(
+                          onPressed: () => launch("tel://0767841468"),
+                          icon: Icon(Icons.call,color: Color(0xffff9000),size :35.0),
+                          label: new Text(
+                            "Call Us :  038-22-95368",
+                            textAlign: TextAlign.left,
+                            style: new TextStyle(
+                              color: Colors.white,
+                              fontSize: 20.0,
+                              fontWeight: FontWeight.bold,
+                              letterSpacing: 0.8,
+                            ),
+                          ),
                       ),
                     ),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
-                      child: Material(
-                        color: Colors.transparent,
-                        elevation: 0.0,
-                        child: MaterialButton(
-                            onPressed:  () => launch("mailto:sunview.beach@gmail.com"),
-                            child: Column(
-                              children: <Widget>[
-                                Icon(Icons.email,color: Color(0xffff9000),),
-                                new Text(
-                                  "Email Us",
-                                  textAlign: TextAlign.center,
-                                  style: new TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 20.0,
-                                    fontWeight: FontWeight.bold,
-                                    letterSpacing: 0.3,
-                                  ),
-                                ),
-                              ],
-                            )
+                      child: FlatButton.icon(
+                          onPressed: () => ("mailto:sunview.beach@gmail.com"),
+                        icon: Icon(Icons.email,color: Color(0xffff9000),size :35.0),
+                        label: new Text(
+                          "sunview.beach@gmail.com",
+                          textAlign: TextAlign.left,
+                          style: new TextStyle(
+                            color: Colors.white,
+                            fontSize: 20.0,
+                            fontWeight: FontWeight.bold,
+                            letterSpacing: 0.8,
+                          ),
                         ),
                       ),
                     ),
 
                   ],
                 )),
-          ),
         ],
       ),
     );
