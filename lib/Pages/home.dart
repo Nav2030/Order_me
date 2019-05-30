@@ -17,7 +17,7 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     Widget imageCarousel =  new Container(
-      height: 200.0,
+      height: 250.0,
       child: new Carousel(
         boxFit: BoxFit.cover,
         images: [
@@ -41,7 +41,7 @@ class _HomeState extends State<Home> {
     );
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xff0e0923),
+        backgroundColor: Color(0xffff9000).withOpacity(0.8),
         actions: <Widget>[
           new IconButton(icon: Icon(Icons.search,color: Colors.white), onPressed: (){}),
           new IconButton(icon: Icon(Icons.shopping_cart,color: Colors.white), onPressed: (){}),
@@ -56,11 +56,11 @@ class _HomeState extends State<Home> {
               currentAccountPicture: GestureDetector(
                 child: CircleAvatar(
                   backgroundColor: Colors.white,
-                  child: Icon(Icons.person,color: Color(0xffff9000)),
+                  child: Icon(Icons.person,color: Color(0xff0e0923)),
                 ),
               ),
               decoration: new BoxDecoration(
-                color: Color(0xff0e0923),
+                color: Color(0xffff9000).withOpacity(0.8),
               ),
             ),
             InkWell(
