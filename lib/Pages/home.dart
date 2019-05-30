@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:system_for_hotel_mobile_app/Pages/contact.dart';
 import 'package:system_for_hotel_mobile_app/Pages/terms.dart';
 import 'package:carousel_pro/carousel_pro.dart';
 
@@ -64,16 +65,6 @@ class _HomeState extends State<Home> {
               ),
             ),
             InkWell(
-              onTap: (){
-                Navigator.push(context, MaterialPageRoute(builder: (context)=> Home()));
-              },
-              child: ListTile(
-                title: Text('Home Page',
-                  style: TextStyle(color:  Color(0xff0e0960)),),
-                leading: Icon(Icons.home,color:  Color(0xff0e0923),),
-              ),
-            ),
-            InkWell(
               onTap: (){},
               child: ListTile(
                 title: Text('My Orders',
@@ -106,7 +97,16 @@ class _HomeState extends State<Home> {
                 leading: Icon(Icons.favorite,color:  Color(0xff0e0923),),
               ),
             ),
-
+            InkWell(
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=> Contact()));
+              },
+              child: ListTile(
+                title: Text('Contact',
+                  style: TextStyle(color:  Color(0xff0e0960)),),
+                leading: Icon(Icons.call,color:  Color(0xff0e0923),),
+              ),
+            ),
             Divider(),
 
             InkWell(
@@ -120,7 +120,6 @@ class _HomeState extends State<Home> {
             InkWell(
               onTap: (){
                 Navigator.push(context, MaterialPageRoute(builder: (context)=> Terms()));
-
               },
               child: ListTile(
                 title: Text('Terms And Conditions',
