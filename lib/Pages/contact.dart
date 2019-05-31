@@ -86,7 +86,7 @@ class _ContactState extends State<Contact> {
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: FlatButton.icon(
-                          onPressed: () => ("mailto:sunview.beach@gmail.com"),
+                          onPressed: () => launch("mailto:sunview.beach@gmail.com"),
                         icon: Icon(Icons.email,color: Color(0xffff9000),size :35.0),
                         label: new Text(
                           "sunview.beach@gmail.com",
