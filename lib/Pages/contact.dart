@@ -10,7 +10,6 @@ class _ContactState extends State<Contact> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomPadding: false,
       body:Stack(
         children: <Widget>[
           Image.asset(
