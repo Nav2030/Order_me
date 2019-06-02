@@ -43,6 +43,7 @@ class _HomeState extends State<Home> {
     );
     return Scaffold(
       appBar: AppBar(
+        title: Text('Home'),
         backgroundColor: Color(0xffff9000).withOpacity(0.8),
         actions: <Widget>[
           new IconButton(icon: Icon(Icons.search,color: Colors.white), onPressed: (){}),
@@ -131,7 +132,23 @@ class _HomeState extends State<Home> {
           ],
         ),
       ),
-      body: ListPage(),
+      body: new ListView(
+        children: <Widget>[
+          imageCarousel,
+          new Padding(
+              padding: new EdgeInsets.all(100.0),
+              child:  new SizedBox(
+                width: 200.0,
+                height: 50.0,
+                child: new RaisedButton(
+                    child: Text("View Menu", style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold,color: Colors.white),),
+                    color: Color(0xff0e0923),
+                    onPressed: () {}
+                ),
+              ),
+          ),
+        ],
+      ),
     );
   }
 }

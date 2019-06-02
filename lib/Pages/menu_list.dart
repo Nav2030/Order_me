@@ -9,7 +9,7 @@ class ListPage extends StatefulWidget {
 class _ListPageState extends State<ListPage> {
   Future getPosts() async{
     var firestore = Firestore.instance;
-    QuerySnapshot qn = await firestore.collection("foods").getDocuments();
+    QuerySnapshot qn = await firestore.collection("foods").where('itemType',isEqualTo: 'Food').getDocuments();
     return qn.documents;
   }
   navigateToDetail(DocumentSnapshot menu){
@@ -70,6 +70,7 @@ class _MenuDetailsState extends State<MenuDetails> {
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.menu.data['itemName'] ),
+        backgroundColor: Color(0xffff9000).withOpacity(0.8),
       ),
       body:Column(
         children: <Widget>[
@@ -87,17 +88,26 @@ class _MenuDetailsState extends State<MenuDetails> {
           ),
           ListTile(
             title:Text(widget.menu.data['itemName'],
-              style: TextStyle(fontSize: 22.0, fontWeight: FontWeight.bold,),
+              style: TextStyle(fontSize: 22.0, fontWeight: FontWeight.bold,color: Color(0xff0e0923)),
             ) ,
           ),
           ListTile(
             title:Text(widget.menu.data['description'],
-              style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold,),
+              style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold,color: Color(0xff0e0923)),
             ),
             subtitle:Text(widget.menu.data['price'],
               style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold,),
             ) ,
           ),
+          new SizedBox(
+            width: 200.0,
+            height: 50.0,
+            child: new RaisedButton(
+                child: Text("Add To Cart", style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold,color: Colors.white),),
+                color: Colors.orange,
+                onPressed: () {}
+            ),
+          )
         ],
 
       ),
