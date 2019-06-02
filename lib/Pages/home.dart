@@ -31,7 +31,7 @@ class _HomeState extends State<Home> {
           AssetImage('assets/carousel/menu5.jpg'),
           AssetImage('assets/carousel/menu6.jpg'),
           AssetImage('assets/carousel/menu7.jpg'),
-          AssetImage('assets/carousel/menu8.jpg'),
+          AssetImage('assets/carousel/menu0.jpg'),
         ],
         autoplay: true,
         animationCurve: Curves.fastOutSlowIn,
@@ -46,10 +46,6 @@ class _HomeState extends State<Home> {
       appBar: AppBar(
         title: Text('Home'),
         backgroundColor: Color(0xffff9000).withOpacity(0.8),
-        actions: <Widget>[
-          new IconButton(icon: Icon(Icons.search,color: Colors.white), onPressed: (){}),
-          new IconButton(icon: Icon(Icons.shopping_cart,color: Colors.white), onPressed: (){}),
-        ],
       ),
       drawer: new Drawer(
         child: new ListView(

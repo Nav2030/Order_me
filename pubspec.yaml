@@ -52,6 +52,7 @@ flutter:
   assets:
   - assets/logo.png
   - assets/background.jpg
+  - assets/carousel/menu0.jpg
   - assets/carousel/menu1.jpg
   - assets/carousel/menu2.jpg
   - assets/carousel/menu3.jpg
@@ -59,7 +60,7 @@ flutter:
   - assets/carousel/menu5.jpg
   - assets/carousel/menu6.jpg
   - assets/carousel/menu7.jpg
-  - assets/carousel/menu8.jpg
+
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
