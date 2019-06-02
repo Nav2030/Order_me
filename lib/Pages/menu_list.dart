@@ -9,7 +9,7 @@ class ListPage extends StatefulWidget {
 class _ListPageState extends State<ListPage> {
   Future getPosts() async{
     var firestore = Firestore.instance;
-    QuerySnapshot qn = await firestore.collection("foods").where('itemType',isEqualTo: 'Food').getDocuments();
+    QuerySnapshot qn = await firestore.collection("foods").where('itemType',isEqualTo: 'Meals').getDocuments();
     return qn.documents;
   }
   navigateToDetail(DocumentSnapshot menu){

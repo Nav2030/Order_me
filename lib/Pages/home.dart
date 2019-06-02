@@ -2,7 +2,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:system_for_hotel_mobile_app/Pages/contact.dart';
 import 'package:system_for_hotel_mobile_app/Pages/menuTypes.dart';
-import 'package:system_for_hotel_mobile_app/Pages/menu_list.dart';
 import 'package:system_for_hotel_mobile_app/Pages/terms.dart';
 import 'package:carousel_pro/carousel_pro.dart';
 

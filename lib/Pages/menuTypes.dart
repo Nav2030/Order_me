@@ -23,11 +23,10 @@ class _TypesState extends State<Types> {
           textAlign: TextAlign.center,),
         actions: <Widget>[
           new IconButton(
-            icon: new Icon(Icons.close),
-            onPressed: () => Navigator.of(context).pop(null),
+            icon: new Icon(Icons.shopping_cart),
+            onPressed: () {},
           ),
         ],
-        leading: new Container(),
       ),
       body: Container(
         child:new  GridView.count(
