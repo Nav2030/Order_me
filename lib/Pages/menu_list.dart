@@ -41,11 +41,22 @@ class _ListPageState extends State<ListPage> {
                         return Container(
                           height: 200,
                           child: Card(
-                            child: new InkWell(
-                              onTap: ()=> navigateToDetail(snapshot.data[index]),
-                              child: Image.network(
-                                snapshot.data[index].data['photoURL'],
-                                fit: BoxFit.cover,),
+                            child: Stack(
+                              children: <Widget>[
+                                new InkWell(
+                                  onTap: ()=> navigateToDetail(snapshot.data[index]),
+                                  child: Image.network(
+                                    snapshot.data[index].data['photoURL'],width: 350.0,
+                                    fit: BoxFit.cover,),
+                                ),
+                                new Positioned(
+                                  left: 5.0,
+                                  bottom: 0.0,
+                                  child: new Text(snapshot.data[index].data['itemName'],
+                                    style: TextStyle(fontSize: 30.0,fontWeight: FontWeight.w900,color: Color(0xff0e0923)),),
+
+                                ),
+                              ],
                             ),
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(10.0),

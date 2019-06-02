@@ -12,6 +12,8 @@ class _TypesState extends State<Types> {
       Navigator.push(context, MaterialPageRoute(builder: (context) => ListPage()));
     }
   }
+  List lst = ["Meals","Starters","Desserts","Appetizers","Beverages","Bar"];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,16 +38,14 @@ class _TypesState extends State<Types> {
                 children: <Widget>[
                   InkWell(
                     onTap: ()=> _onTileClicked(index),
-                    child: Image.asset("assets/carousel/menu$index.jpg",height:125.0,fit: BoxFit.cover,),
+                    child: Image.asset("assets/types/Type$index.jpg",height:135.0,fit: BoxFit.cover,),
                   ),
                   new Positioned(
                     left: 0.0,
-                    bottom: 20.0,
-                    child: new Text('title',
-                        style: new TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 20.0,
-                        )),
+                    bottom: 15.0,
+
+                    child: new Text(lst[index],
+                    style: TextStyle(fontSize: 20.0,fontWeight: FontWeight.bold),),
                   ),
 
                 ],
