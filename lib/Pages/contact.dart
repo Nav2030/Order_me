@@ -32,7 +32,7 @@ class _ContactState extends State<Contact> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(top :200.0),
+            padding: const EdgeInsets.only(top :180.0),
                 child: Column(
                   children: <Widget>[
                     Padding(
@@ -41,7 +41,7 @@ class _ContactState extends State<Contact> {
                         'Contact Us',
                         textAlign: TextAlign.center,
                         style: new TextStyle(
-                          color: Colors.orange,
+                          color: Color(0xffff9000).withOpacity(0.8),
                           fontSize: 30.0,
                           fontWeight: FontWeight.w800,
                           letterSpacing: 0.6,
@@ -50,58 +50,61 @@ class _ContactState extends State<Contact> {
                     ),
 
                     Padding(
-                      padding: const EdgeInsets.all(30.0),
-                      child: ListTile(
-                          title: Text(
-                          'Sun View Beach Hotel, Pohaddaramulla,       Wadduwa',
-                          textAlign: TextAlign.left,
-                          style: new TextStyle(
-                            color: Colors.white,
-                            fontSize: 18.0,
-                            fontWeight: FontWeight.w500,
-                            letterSpacing: 0.6,
-                          ),
-                        ),
-                        leading: Icon(Icons.home,color: Color(0xffff9000),size :35.0),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: FlatButton.icon(
-                          onPressed: () => launch("tel://0767841468"),
-                          icon: Icon(Icons.call,color: Color(0xffff9000),size :35.0),
-                          label: new Text(
-                            "Call Us :  038-22-95368",
-                            textAlign: TextAlign.left,
-                            style: new TextStyle(
-                              color: Colors.white,
-                              fontSize: 20.0,
-                              fontWeight: FontWeight.bold,
-                              letterSpacing: 0.8,
+                      padding: const EdgeInsets.all(12.0),
+                        child: new ListTile(
+                              title: Text(
+                                'Sun View Beach Hotel, Pohaddaramulla,       Wadduwa',
+                                textAlign: TextAlign.left,
+                                style: new TextStyle(
+                                  color: Colors.white.withOpacity(0.6),
+                                  fontSize: 20.0,
+                                  fontWeight: FontWeight.w500,
+                                  letterSpacing: 0.6,
+                                ),
+                              ),
+                              leading: Icon(Icons.home,color: Color(0xffff9000).withOpacity(0.8),size :35.0),
                             ),
-                          ),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: FlatButton.icon(
-                          onPressed: () => launch("mailto:sunview.beach@gmail.com"),
-                        icon: Icon(Icons.email,color: Color(0xffff9000),size :35.0),
-                        label: new Text(
-                          "sunview.beach@gmail.com",
-                          textAlign: TextAlign.left,
-                          style: new TextStyle(
-                            color: Colors.white,
-                            fontSize: 20.0,
-                            fontWeight: FontWeight.bold,
-                            letterSpacing: 0.8,
-                          ),
-                        ),
-                      ),
-                    ),
 
+                    ),
+                    Padding(padding: const EdgeInsets.all(12.0),
+                      child: new InkWell(
+                          onTap:  () => launch("tel://0383374374"),
+                          child :ListTile(
+                            title: Text(
+                              '038-33-74374',
+                              textAlign: TextAlign.left,
+                              style: new TextStyle(
+                                color: Colors.white.withOpacity(0.6),
+                                fontSize: 20.0,
+                                fontWeight: FontWeight.w500,
+                                letterSpacing: 0.6,
+                              ),
+                            ),
+                            leading: Icon(Icons.call,color: Color(0xffff9000).withOpacity(0.8),size :35.0),
+                          )
+                      ),
+                    ),
+                    Padding(padding: const EdgeInsets.all(12.0),
+                      child: new InkWell(
+                          onTap:  () => launch("mailto:sunview.beach@gmail.com"),
+                          child :ListTile(
+                            title: Text(
+                              "sunview.beach@gmail.com",
+                              textAlign: TextAlign.left,
+                              style: new TextStyle(
+                                color: Colors.white.withOpacity(0.6),
+                                fontSize: 20.0,
+                                fontWeight: FontWeight.w500,
+                                letterSpacing: 0.6,
+                              ),
+                            ),
+                            leading: Icon(Icons.mail,color: Color(0xffff9000).withOpacity(0.8),size :35.0),
+                          )
+                      ),
+                    ),
                   ],
-                )),
+                )
+          ),
         ],
       ),
     );

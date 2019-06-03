@@ -41,10 +41,11 @@ class _TypesState extends State<Types> {
                         child: Image.asset("assets/types/Type$index.jpg",height:135.0,fit: BoxFit.cover,),
                       ),
                       new Positioned(
-                        left: 0.0,
+                        left: 5.0,
                         bottom: 15.0,
                         child: new Text(lst[index],
-                          style: TextStyle(fontSize: 20.0,fontWeight: FontWeight.bold),),
+                          style: TextStyle(fontFamily:'RobotoMono',fontSize: 20.0,fontWeight: FontWeight.bold),textAlign: TextAlign.center,
+                        ),
                       ),
                     ],
                   )
