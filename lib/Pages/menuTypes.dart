@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:system_for_hotel_mobile_app/Pages/appetizersMenu.dart';
+import 'package:system_for_hotel_mobile_app/Pages/barMenu.dart';
+import 'package:system_for_hotel_mobile_app/Pages/beveragesMenu.dart';
+import 'package:system_for_hotel_mobile_app/Pages/dessertsMenu.dart';
 import 'package:system_for_hotel_mobile_app/Pages/menu_list.dart';
+import 'package:system_for_hotel_mobile_app/Pages/startersMenu.dart';
 
 class Types extends StatefulWidget {
   @override
@@ -8,9 +13,16 @@ class Types extends StatefulWidget {
 
 class _TypesState extends State<Types> {
   _onTileClicked(int index){
-    if(index == 0){
-      Navigator.push(context, MaterialPageRoute(builder: (context) => ListPage()));
+    switch(index){
+      case 0 : Navigator.push(context, MaterialPageRoute(builder: (context) => ListPage())); break;
+      case 1 : Navigator.push(context, MaterialPageRoute(builder: (context) => StartersMenuListPage())); break;
+      case 2 : Navigator.push(context, MaterialPageRoute(builder: (context) => DessertsMenuListPage())); break;
+      case 3 : Navigator.push(context, MaterialPageRoute(builder: (context) => AppetizersMenuListPage())); break;
+      case 4 : Navigator.push(context, MaterialPageRoute(builder: (context) => BeveragesMenuListPage())); break;
+      case 5 : Navigator.push(context, MaterialPageRoute(builder: (context) => BarMenuListPage())); break;
+
     }
+
   }
   List lst = ["Meals","Starters","Desserts","Appetizers","Beverages","Bar"];
 

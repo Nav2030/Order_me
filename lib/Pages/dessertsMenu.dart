@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-class ListPage extends StatefulWidget {
+class DessertsMenuListPage extends StatefulWidget {
   @override
-  _ListPageState createState() => _ListPageState();
+  _DessertsMenuListPageState createState() => _DessertsMenuListPageState();
 }
 
-class _ListPageState extends State<ListPage> {
+class _DessertsMenuListPageState extends State<DessertsMenuListPage> {
   Future getPosts() async{
     var firestore = Firestore.instance;
-    QuerySnapshot qn = await firestore.collection("foods").where('itemType',isEqualTo: 'Meals').getDocuments();
+    QuerySnapshot qn = await firestore.collection("foods").where('itemType',isEqualTo: 'Desserts').getDocuments();
     return qn.documents;
   }
   navigateToDetail(DocumentSnapshot menu){
@@ -143,44 +143,44 @@ class _MenuDetailsState extends State<MenuDetails> {
           Divider(),
           ListTile(
             title: new Row(
-                  children: <Widget>[
-                    new Container(
-                      child: Text('Quantity : ',
-                          style: new TextStyle(fontSize: 22.0,color: Color(0xff0e0923).withOpacity(0.7),fontFamily: 'Raleway',fontWeight: FontWeight.bold)),
-                    ),
-                    new Container(
-                      width: 60.0,
-                      height: 50.0,
-                      child: FlatButton(
-                        color : Color(0xffff9000).withOpacity(0.8),
-                        onPressed: ()=>setState(()=>_itemCount++),
-                        child: new Icon(Icons.add, color: Colors.white,size: 30.0,),
-                      ),
-                    ),
+              children: <Widget>[
+                new Container(
+                  child: Text('Quantity : ',
+                      style: new TextStyle(fontSize: 22.0,color: Color(0xff0e0923).withOpacity(0.7),fontFamily: 'Raleway',fontWeight: FontWeight.bold)),
+                ),
+                new Container(
+                  width: 60.0,
+                  height: 50.0,
+                  child: FlatButton(
+                    color : Color(0xffff9000).withOpacity(0.8),
+                    onPressed: ()=>setState(()=>_itemCount++),
+                    child: new Icon(Icons.add, color: Colors.white,size: 30.0,),
+                  ),
+                ),
 
-                    new Container(
-                      width: 60.0,
-                      height: 50.0,
-                      child: FlatButton(
-                        onPressed: (){},
-                        child: Text('$_itemCount',
-                            style: new TextStyle(fontSize: 22.0)),
-                      ),
-                    ),
-                    new Container(
-                        width: 60.0,
-                        height: 50.0,
-                        child: FlatButton(
-                          color:Color(0xffff9000).withOpacity(0.8) ,
-                          onPressed: ()=>setState(()=>_itemCount--),
-                          child: new Icon(
-                            const IconData(0xe15b, fontFamily: 'MaterialIcons',),
-                            color: Colors.white,size: 30.0,),
-                      ),
-                    ),
+                new Container(
+                  width: 60.0,
+                  height: 50.0,
+                  child: FlatButton(
+                    onPressed: (){},
+                    child: Text('$_itemCount',
+                        style: new TextStyle(fontSize: 22.0)),
+                  ),
+                ),
+                new Container(
+                  width: 60.0,
+                  height: 50.0,
+                  child: FlatButton(
+                    color:Color(0xffff9000).withOpacity(0.8) ,
+                    onPressed: ()=>setState(()=>_itemCount--),
+                    child: new Icon(
+                      const IconData(0xe15b, fontFamily: 'MaterialIcons',),
+                      color: Colors.white,size: 30.0,),
+                  ),
+                ),
 
-                  ],
-              ),
+              ],
+            ),
           ),
         ],
 
