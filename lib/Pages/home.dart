@@ -144,12 +144,12 @@ class _HomeState extends State<Home> {
             height: double.infinity,
           ),
           Padding(
-            padding: const EdgeInsets.only(top :10.0),
+            padding: const EdgeInsets.only(top :16.0),
               child: Center(
                 child: Column(
                   children: <Widget>[
                     Padding(
-                      padding: const EdgeInsets.all(8.0),
+                      padding: const EdgeInsets.all(6.0),
                         child: Text(
                           'Welcome',
                           textAlign: TextAlign.center,
@@ -161,7 +161,7 @@ class _HomeState extends State<Home> {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.all(8.0),
+                      padding: const EdgeInsets.all(6.0),
                         child: Text(
                           'Sun View Beach Hotel',
                           textAlign: TextAlign.center,
@@ -177,11 +177,11 @@ class _HomeState extends State<Home> {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.all(20.0),
+                      padding: const EdgeInsets.all(12.0),
                       child:imageCarousel,
                     ),
                     Padding(
-                      padding: const EdgeInsets.all(12.0),
+                      padding: const EdgeInsets.all(8.0),
                       child:InkWell(
                         onTap: ()=> Navigator.push(context, MaterialPageRoute(builder: (context)=> Types())),
                         child: Text('See your menu  >>',textAlign: TextAlign.center,
