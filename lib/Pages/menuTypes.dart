@@ -19,7 +19,7 @@ class _TypesState extends State<Types> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color(0xffff9000).withOpacity(0.8),
-        title: Text('Menu',
+        title: Text('Menu Categories',
           textAlign: TextAlign.center,),
         actions: <Widget>[
           new IconButton(
@@ -28,30 +28,30 @@ class _TypesState extends State<Types> {
           ),
         ],
       ),
-      body: Container(
-        child:new  GridView.count(
-        crossAxisCount: 2,
-        children: List.generate(6, (index) {
-          return Card(
-              child: new Stack(
-                children: <Widget>[
-                  InkWell(
-                    onTap: ()=> _onTileClicked(index),
-                    child: Image.asset("assets/types/Type$index.jpg",height:135.0,fit: BoxFit.cover,),
-                  ),
-                  new Positioned(
-                    left: 0.0,
-                    bottom: 15.0,
-
-                    child: new Text(lst[index],
-                    style: TextStyle(fontSize: 20.0,fontWeight: FontWeight.bold),),
-                  ),
-
-                ],
-              )
-          ); //robohash.org api provide you different images for any number you are giving
-        }),
-      ),
+      body: Padding(padding: const EdgeInsets.only(top: 5.0) ,
+        child: Container(
+          child:new  GridView.count(
+            crossAxisCount: 2,
+            children: List.generate(6, (index) {
+              return Card(
+                  child: new Stack(
+                    children: <Widget>[
+                      InkWell(
+                        onTap: ()=> _onTileClicked(index),
+                        child: Image.asset("assets/types/Type$index.jpg",height:135.0,fit: BoxFit.cover,),
+                      ),
+                      new Positioned(
+                        left: 0.0,
+                        bottom: 15.0,
+                        child: new Text(lst[index],
+                          style: TextStyle(fontSize: 20.0,fontWeight: FontWeight.bold),),
+                      ),
+                    ],
+                  )
+              ); //robohash.org api provide you different images for any number you are giving
+            }),
+          ),
+        ),
       ),
     );
   }

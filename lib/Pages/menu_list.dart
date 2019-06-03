@@ -53,7 +53,7 @@ class _ListPageState extends State<ListPage> {
                                   left: 5.0,
                                   bottom: 0.0,
                                   child: new Text(snapshot.data[index].data['itemName'],
-                                    style: TextStyle(fontSize: 30.0,fontWeight: FontWeight.w900,color: Color(0xff0e0923)),),
+                                    style: TextStyle(fontSize: 30.0,fontFamily: 'Raleway',fontWeight: FontWeight.w900,color: Color(0xff0e0923).withOpacity(0.7)),),
 
                                 ),
                               ],
@@ -109,9 +109,9 @@ class _MenuDetailsState extends State<MenuDetails> {
                       height: 75.0,
                       width: 75.0,
                       child: FloatingActionButton(
-                        backgroundColor:Color(0xffff9000) ,
+                        backgroundColor:Colors.white,
                         onPressed: (){},
-                        child: new Icon(Icons.add_shopping_cart, color:Colors.white ,size: 40.0,),
+                        child: new Icon(Icons.add_shopping_cart, color:Color(0xffff9000).withOpacity(0.8),size: 40.0,),
                       ),
                     ),
                   ),
@@ -128,16 +128,16 @@ class _MenuDetailsState extends State<MenuDetails> {
 
           ListTile(
             title:Text(widget.menu.data['itemName'],
-              style: TextStyle(fontSize: 22.0, fontWeight: FontWeight.bold,color: Color(0xff0e0923)),
+              style: TextStyle(fontSize: 22.0,fontFamily: 'Raleway', fontWeight: FontWeight.bold,color: Color(0xff0e0923).withOpacity(0.7)),
             ) ,
           ),
           Divider(),
           ListTile(
             title:Text(widget.menu.data['description'],
-              style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold,color: Color(0xff0e0923)),
+              style: TextStyle(fontSize: 20.0,fontFamily: 'Raleway', fontWeight: FontWeight.bold,color: Color(0xff0e0923).withOpacity(0.7)),
             ),
             subtitle:Text(widget.menu.data['price'],
-              style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold,),
+              style: TextStyle(fontSize: 20.0, fontFamily: 'Raleway',fontWeight: FontWeight.bold,),
             ) ,
           ),
           Divider(),
@@ -146,15 +146,15 @@ class _MenuDetailsState extends State<MenuDetails> {
                   children: <Widget>[
                     new Container(
                       child: Text('Quantity : ',
-                          style: new TextStyle(fontSize: 22.0,color: Color(0xff0e0923),fontWeight: FontWeight.bold)),
+                          style: new TextStyle(fontSize: 22.0,color: Color(0xff0e0923).withOpacity(0.7),fontFamily: 'Raleway',fontWeight: FontWeight.bold)),
                     ),
                     new Container(
                       width: 60.0,
                       height: 50.0,
                       child: FlatButton(
-                        color : Color(0xffff9000),
+                        color : Color(0xffff9000).withOpacity(0.8),
                         onPressed: ()=>setState(()=>_itemCount++),
-                        child: new Icon(Icons.add, color: Colors.white,),
+                        child: new Icon(Icons.add, color: Colors.white,size: 30.0,),
                       ),
                     ),
 
@@ -171,11 +171,11 @@ class _MenuDetailsState extends State<MenuDetails> {
                         width: 60.0,
                         height: 50.0,
                         child: FlatButton(
-                          color:Color(0xffff9000) ,
+                          color:Color(0xffff9000).withOpacity(0.8) ,
                           onPressed: ()=>setState(()=>_itemCount--),
                           child: new Icon(
-                            const IconData(0xe15b, fontFamily: 'MaterialIcons'),
-                            color: Colors.white),
+                            const IconData(0xe15b, fontFamily: 'MaterialIcons',),
+                            color: Colors.white,size: 30.0,),
                       ),
                     ),
 
