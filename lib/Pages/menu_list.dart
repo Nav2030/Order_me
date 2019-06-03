@@ -86,6 +86,7 @@ class MenuDetails extends StatefulWidget {
 }
 
 class _MenuDetailsState extends State<MenuDetails> {
+  int _itemCount = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -97,21 +98,40 @@ class _MenuDetailsState extends State<MenuDetails> {
         children: <Widget>[
           Container(
             height: 250.0,
-            width: 400.0,
             child: Card(
-              child:Image.network(widget.menu.data['photoURL'],fit: BoxFit.cover,),
+              child : new Stack(
+                children: <Widget>[
+                  Image.network(widget.menu.data['photoURL'],width:350.0,fit: BoxFit.cover,),
+                  new Positioned(
+                    right: 0.0,
+                    bottom: 0.0,
+                    child:  new Container(
+                      height: 75.0,
+                      width: 75.0,
+                      child: FloatingActionButton(
+                        backgroundColor:Color(0xffff9000) ,
+                        onPressed: (){},
+                        child: new Icon(Icons.add_shopping_cart, color:Colors.white ,size: 40.0,),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(10.0),
               ),
               elevation: 5,
               margin: EdgeInsets.all(10),
             ),
+
           ),
+          Divider(),
           ListTile(
             title:Text(widget.menu.data['itemName'],
               style: TextStyle(fontSize: 22.0, fontWeight: FontWeight.bold,color: Color(0xff0e0923)),
             ) ,
           ),
+          Divider(),
           ListTile(
             title:Text(widget.menu.data['description'],
               style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold,color: Color(0xff0e0923)),
@@ -120,15 +140,48 @@ class _MenuDetailsState extends State<MenuDetails> {
               style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold,),
             ) ,
           ),
-          new SizedBox(
-            width: 200.0,
-            height: 50.0,
-            child: new RaisedButton(
-                child: Text("Add To Cart", style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold,color: Colors.white),),
-                color: Colors.orange,
-                onPressed: () {}
-            ),
-          )
+          Divider(),
+          ListTile(
+            title: new Row(
+                  children: <Widget>[
+                    new Container(
+                      child: Text('Quantity : ',
+                          style: new TextStyle(fontSize: 22.0,color: Color(0xff0e0923),fontWeight: FontWeight.bold)),
+                    ),
+                    new Container(
+                      width: 60.0,
+                      height: 50.0,
+                      child: FlatButton(
+                        color : Color(0xffff9000),
+                        onPressed: ()=>setState(()=>_itemCount++),
+                        child: new Icon(Icons.add, color: Colors.white,),
+                      ),
+                    ),
+
+                    new Container(
+                      width: 60.0,
+                      height: 50.0,
+                      child: FlatButton(
+                        color:Colors.white,
+                        child: Text('$_itemCount',
+                            style: new TextStyle(fontSize: 22.0)),
+                      ),
+                    ),
+                    new Container(
+                        width: 60.0,
+                        height: 50.0,
+                        child: FlatButton(
+                          color:Color(0xffff9000) ,
+                          onPressed: ()=>setState(()=>_itemCount--),
+                          child: new Icon(
+                            const IconData(0xe15b, fontFamily: 'MaterialIcons'),
+                            color: Colors.white),
+                      ),
+                    ),
+
+                  ],
+              ),
+          ),
         ],
 
       ),
