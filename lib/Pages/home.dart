@@ -19,7 +19,7 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     Widget imageCarousel =  new Container(
-      height: 250.0,
+      height: 200.0,
       child: new Carousel(
         boxFit: BoxFit.cover,
         images: [
@@ -33,7 +33,7 @@ class _HomeState extends State<Home> {
           AssetImage('assets/carousel/menu0.jpg'),
         ],
         autoplay: true,
-        animationCurve: Curves.fastOutSlowIn,
+        animationCurve: Curves.easeOutSine,
         animationDuration: Duration(milliseconds: 1000),
         dotSize: 4.0,
         indicatorBgPadding: 6.0,
@@ -80,7 +80,9 @@ class _HomeState extends State<Home> {
               ),
             ),
             InkWell(
-              onTap: (){},
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=> Types()));
+              },
               child: ListTile(
                 title: Text('Categories',
                   style: TextStyle(color:  Color(0xff0e0960)),),
@@ -128,25 +130,70 @@ class _HomeState extends State<Home> {
           ],
         ),
       ),
-      body: new ListView(
+      body: Stack(
         children: <Widget>[
-          imageCarousel,
-          new Padding(
-              padding: new EdgeInsets.all(100.0),
-              child:  new SizedBox(
-                width: 200.0,
-                height: 50.0,
-                child: new RaisedButton(
-                    child: Text("View Menu", style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold,color: Colors.white),),
-                    color: Color(0xff0e0923),
-                    onPressed: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => Types()));
-                    }
-                ),
-              ),
+          Image.asset(
+            'assets/background.jpg',
+            fit: BoxFit.cover,
+            width: double.infinity,
+            height : double.infinity,
           ),
-        ],
-      ),
+          Container(
+            color: Color(0xff0e0923).withOpacity(0.68),
+            width: double.infinity,
+            height: double.infinity,
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top :10.0),
+              child: Center(
+                child: Column(
+                  children: <Widget>[
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                        child: Text(
+                          'Welcome',
+                          textAlign: TextAlign.center,
+                          style: new TextStyle(
+                          color: Colors.white,fontFamily: 'Raleway',
+                          fontSize: 40.0,fontStyle: FontStyle.italic,
+                          fontWeight: FontWeight.w800, letterSpacing: 1.5,
+                          ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                        child: Text(
+                          'Sun View Beach Hotel',
+                          textAlign: TextAlign.center,
+                          style: new TextStyle(fontStyle: FontStyle.italic,color: Colors.orange,fontFamily: 'Raleway', fontSize: 35.0, fontWeight: FontWeight.w700, letterSpacing: 0.6,),
+                        ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(12.0),
+                      child: Text(
+                        'Order your Favourites',
+                        textAlign: TextAlign.center,
+                        style: new TextStyle(fontStyle: FontStyle.italic,color: Colors.white.withOpacity(0.7),fontFamily: 'RobotoMono', fontSize: 25.0, fontWeight: FontWeight.w700, letterSpacing: 0.6,),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(20.0),
+                      child:imageCarousel,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(12.0),
+                      child:InkWell(
+                        onTap: ()=> Navigator.push(context, MaterialPageRoute(builder: (context)=> Types())),
+                        child: Text('See your menu  >>',textAlign: TextAlign.center,
+                          style: new TextStyle(fontStyle: FontStyle.italic,color: Colors.white.withOpacity(0.6),fontFamily: 'Raleway', fontSize: 20.0, fontWeight: FontWeight.w400, ),
+                        ) ,
+                      ),
+                    ),
+                  ],
+              )),
+            ),
+          ],
+        ),
     );
   }
 }

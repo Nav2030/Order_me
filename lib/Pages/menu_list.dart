@@ -125,7 +125,7 @@ class _MenuDetailsState extends State<MenuDetails> {
             ),
 
           ),
-          Divider(),
+
           ListTile(
             title:Text(widget.menu.data['itemName'],
               style: TextStyle(fontSize: 22.0, fontWeight: FontWeight.bold,color: Color(0xff0e0923)),
