@@ -19,7 +19,7 @@ class _BarMenuListPageState extends State<BarMenuListPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Meals'),
+        title: Text('Bar'),
         backgroundColor: Color(0xffff9000).withOpacity(0.8),
         actions: <Widget>[
           new IconButton(icon: Icon(Icons.shopping_cart,color: Colors.white), onPressed: (){}),

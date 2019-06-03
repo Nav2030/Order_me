@@ -19,7 +19,7 @@ class _StartersMenuListPageState extends State<StartersMenuListPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Meals'),
+        title: Text('Starters'),
         backgroundColor: Color(0xffff9000).withOpacity(0.8),
         actions: <Widget>[
           new IconButton(icon: Icon(Icons.shopping_cart,color: Colors.white), onPressed: (){}),
