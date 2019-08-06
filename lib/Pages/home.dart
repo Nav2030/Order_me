@@ -144,24 +144,24 @@ class _HomeState extends State<Home> {
             height: double.infinity,
           ),
           Padding(
-            padding: const EdgeInsets.only(top :16.0),
+            padding: const EdgeInsets.only(top :10.0),
               child: Center(
                 child: Column(
                   children: <Widget>[
                     Padding(
-                      padding: const EdgeInsets.all(6.0),
+                      padding: const EdgeInsets.all(8.0),
                         child: Text(
                           'Welcome',
                           textAlign: TextAlign.center,
                           style: new TextStyle(
-                          color: Colors.white,fontFamily: 'Raleway',
-                          fontSize: 40.0,fontStyle: FontStyle.italic,
-                          fontWeight: FontWeight.w800, letterSpacing: 1.5,
+                          color: Colors.white.withOpacity(0.7),fontFamily: 'Raleway',
+                          fontSize: 35.0,fontStyle: FontStyle.italic,
+                          fontWeight: FontWeight.w800, letterSpacing: 0.8,
                           ),
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.all(6.0),
+                      padding: const EdgeInsets.all(8.0),
                         child: Text(
                           'Sun View Beach Hotel',
                           textAlign: TextAlign.center,
@@ -180,14 +180,11 @@ class _HomeState extends State<Home> {
                       padding: const EdgeInsets.all(12.0),
                       child:imageCarousel,
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child:InkWell(
+                    InkWell(
                         onTap: ()=> Navigator.push(context, MaterialPageRoute(builder: (context)=> Types())),
                         child: Text('See your menu  >>',textAlign: TextAlign.center,
                           style: new TextStyle(fontStyle: FontStyle.italic,color: Colors.white.withOpacity(0.6),fontFamily: 'Raleway', fontSize: 20.0, fontWeight: FontWeight.w400, ),
                         ) ,
-                      ),
                     ),
                   ],
               )),
