@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:system_for_hotel_mobile_app/Pages/contact.dart';
-import 'package:system_for_hotel_mobile_app/Pages/menuTypes.dart';
+import 'package:system_for_hotel_mobile_app/Pages/mainMenu.dart';
 import 'package:system_for_hotel_mobile_app/Pages/terms.dart';
 import 'package:carousel_pro/carousel_pro.dart';
 
@@ -81,7 +81,7 @@ class _HomeState extends State<Home> {
             ),
             InkWell(
               onTap: (){
-                Navigator.push(context, MaterialPageRoute(builder: (context)=> Types()));
+                Navigator.push(context, MaterialPageRoute(builder: (context)=> Mainmenu()));
               },
               child: ListTile(
                 title: Text('Categories',
@@ -181,7 +181,7 @@ class _HomeState extends State<Home> {
                       child:imageCarousel,
                     ),
                     InkWell(
-                        onTap: ()=> Navigator.push(context, MaterialPageRoute(builder: (context)=> Types())),
+                        onTap: ()=> Navigator.push(context, MaterialPageRoute(builder: (context)=> Mainmenu())),
                         child: Text('See your menu  >>',textAlign: TextAlign.center,
                           style: new TextStyle(fontStyle: FontStyle.italic,color: Colors.white.withOpacity(0.6),fontFamily: 'Raleway', fontSize: 20.0, fontWeight: FontWeight.w400, ),
                         ) ,

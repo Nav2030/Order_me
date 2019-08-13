@@ -53,7 +53,7 @@ class _BeveragesMenuListPageState extends State<BeveragesMenuListPage> {
                                   left: 5.0,
                                   bottom: 0.0,
                                   child: new Text(snapshot.data[index].data['itemName'],
-                                    style: TextStyle(fontSize: 30.0,fontFamily: 'Raleway',fontWeight: FontWeight.w900,color: Color(0xff0e0923).withOpacity(0.6)),),
+                                    style: TextStyle(fontSize: 30.0,fontFamily: 'Raleway',fontWeight: FontWeight.w900,backgroundColor:Color(0xff0e0923).withOpacity(0.6),color: Colors.white.withOpacity(0.8)),),
 
                                 ),
                               ],
