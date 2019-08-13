@@ -4,6 +4,7 @@ import 'package:system_for_hotel_mobile_app/Pages/beveragesMenu.dart';
 import 'package:system_for_hotel_mobile_app/Pages/dessertsMenu.dart';
 import 'package:system_for_hotel_mobile_app/Pages/menu_list.dart';
 import 'package:system_for_hotel_mobile_app/Pages/startersMenu.dart';
+import 'package:system_for_hotel_mobile_app/Pages/viewCart.dart';
 
 class Types extends StatefulWidget {
   @override
@@ -33,7 +34,7 @@ class _TypesState extends State<Types> {
         actions: <Widget>[
           new IconButton(
             icon: new Icon(Icons.shopping_cart),
-            onPressed: () {},
+            onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) => ViewCart())),
           ),
         ],
       ),

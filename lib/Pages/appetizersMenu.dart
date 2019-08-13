@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:system_for_hotel_mobile_app/Pages/viewCart.dart';
 import 'meuDetailsdart.dart';
 
 class AppetizersMenuListPage extends StatefulWidget {
@@ -23,7 +24,8 @@ class _AppetizersMenuListPageState extends State<AppetizersMenuListPage> {
         title: Text('Appetizers'),
         backgroundColor: Color(0xffff9000).withOpacity(0.8),
         actions: <Widget>[
-          new IconButton(icon: Icon(Icons.shopping_cart,color: Colors.white), onPressed: (){}),
+          new IconButton(icon: Icon(Icons.shopping_cart,color: Colors.white),
+            onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) => ViewCart())),              ),
         ],
       ),
       body:Container(
